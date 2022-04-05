@@ -1,0 +1,48 @@
+// Import des fichiers partiels
+@use "variables" as v;
+@use "mixins" as m;
+@use "body" as b;
+
+.container-flex-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    .header-left{
+        width: 15%;
+    }
+
+    .header-right{
+            a{
+            @include m.button();
+            }
+    }
+}
+
+h1{
+    color: v.$yellow-color;
+    text-align: center;
+}
+
+.mattress-elements-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .img{
+        width: 15%;
+    }
+
+    .call-price{
+        text-decoration: line-through;
+    }
+
+    .reduced_price{
+        color: red;
+    }
+
+    a{
+        @include m.button();
+    }
+}
+

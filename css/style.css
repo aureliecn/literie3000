@@ -1,3 +1,80 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-size: 1.6rem;
+  font-family: "Roboto", Sans-serif;
+  background-color: #134182;
+  color: white;
+  margin: 1rem 1rem;
+  text-transform: uppercase;
+}
+
+img {
+  width: 100%;
+  border-radius: 10%;
+}
+
+.container-flex-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container-flex-header .header-left {
+  width: 15%;
+}
+.container-flex-header .header-right a {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  color: #134182;
+  background-color: white;
+  border-radius: 5%;
+  text-decoration: none;
+}
+.container-flex-header .header-right a:hover {
+  color: white;
+  background-color: #134182;
+}
+
+h1 {
+  color: #F9C74A;
+  text-align: center;
+}
+
+.mattress-elements-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mattress-elements-container .img {
+  width: 15%;
+}
+.mattress-elements-container .call-price {
+  text-decoration: line-through;
+}
+.mattress-elements-container .reduced_price {
+  color: red;
+}
+.mattress-elements-container a {
+  display: inline-block;
+  margin: 1rem 0;
+  padding: 0.5rem 1rem;
+  color: #134182;
+  background-color: white;
+  border-radius: 5%;
+  text-decoration: none;
+}
+.mattress-elements-container a:hover {
+  color: white;
+  background-color: #134182;
+}
 
 /*# sourceMappingURL=style.css.map */

@@ -1,0 +1,17 @@
+@use "variables" as v;
+@mixin button (){
+    display: inline-block;
+    margin : 1rem 0;
+    padding : 0.5rem 1rem;
+
+    color: v.$blue-color;
+    background-color: v.$white-color;
+    border-radius: 5%;
+    
+    text-decoration: none;
+
+    &:hover{
+        color: v.$white-color;
+        background-color: v.$blue-color;
+    }
+}

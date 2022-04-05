@@ -1,0 +1,31 @@
+@use "variables" as v;
+*{
+    // Prendre en compte la bordure et le remplissage dans les valeurs définies pour les largeurs et les hauteurs
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    // Définir 1rem = 10px
+    font-size: 62.5%;
+
+}
+
+body{
+    // Taille par défaut à 16px
+    font-size: 1.6rem;
+
+    font-family: "Roboto",Sans-serif;
+    background-color: v.$blue-color;
+    color: v.$white-color;
+    margin: 1rem 1rem;
+
+    text-transform: uppercase;
+}
+
+img{
+    // Forcer les images à prendre 100% de la taille de leur container pour les rendre responsives
+    width: 100%;
+    border-radius: 10%;
+}

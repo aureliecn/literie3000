@@ -17,27 +17,26 @@ $mattress = $query->fetchAll(PDO::FETCH_ASSOC);
     <h1>Catalogue</h1>
     <div class="all-mattress-container">
         <?php
-        foreach ($mattress as $item){
-            ?>
+        foreach ($mattress as $item) {
+        ?>
             <div class="mattress-elements-container">
-                <img src="<?= $item["picture"] ?>" alt="<?= $item["name"] ?>">
+                <div class="img">
+                    <img src="<?= $item["picture"] ?>" alt="<?= $item["name"] ?>">
+                </div>
                 <p><?= $item["marque"] ?></p>
                 <div class="name-container">
                     <p><?= $item["name"] ?></p>
                     <p><?= $item["dimension"] ?></p>
                 </div>
                 <div class="price-container">
-                    <p><?= $item["call_price"] ?></p>
-                    <p><?= $item["reduced_price"] ?></p>
+                    <p class="call-price"><?= $item["call_price"] ?>€</p>
+                    <p class="reduced_price"><?= $item["reduced_price"] ?>€</p>
                 </div>
-                <button class="btn">
-                    <a href="./update_mattress.php?id=<?= $item["id"] ?>">Modifier</a>
-                </button>
-                <button class="btn">
-                    <a href="./delete_mattress.php?id=<?= $item["id"] ?>">Supprimer</a>
-                </button>
+                <a href="./update_mattress.php?id=<?= $item["id"] ?>">Modifier</a>
+                <a href="./delete_mattress.php?id=<?= $item["id"] ?>">Supprimer</a>
+
             </div>
-            <?php
+        <?php
         }
         ?>
     </div>
