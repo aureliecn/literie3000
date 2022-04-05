@@ -31,10 +31,10 @@ $mattress = $query->fetchAll(PDO::FETCH_ASSOC);
                     <p><?= $item["reduced_price"] ?></p>
                 </div>
                 <button class="btn">
-                    <a href="./update_mattress.php">Modifier</a>
+                    <a href="./update_mattress.php?id=<?= $item["id"] ?>">Modifier</a>
                 </button>
                 <button class="btn">
-                    <a href="./delete_mattress.php">Supprimer</a>
+                    <a href="./delete_mattress.php?id=<?= $item["id"] ?>">Supprimer</a>
                 </button>
             </div>
             <?php
