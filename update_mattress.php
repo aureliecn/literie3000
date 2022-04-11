@@ -11,8 +11,10 @@ if (isset($_GET["id"])) {
     $dsn = "mysql:host=localhost;dbname=literie3000";
     $db = new PDO($dsn, "root", "root");
 
+    $id = trim(strip_tags($_GET["id"]));
+
     $query = $db->prepare("SELECT * FROM mattress WHERE id = :id");
-    $query->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
+    $query->bindParam(":id", $id, PDO::PARAM_INT);
     // On exécute la requête
     $query->execute();
     $item = $query->fetch();
@@ -73,7 +75,7 @@ if (isset($_GET["id"])) {
                 ");
                 // var_dump($test);
                 // On associe une variable à chaque paramètres de la requête préparée
-                $query->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
+                $query->bindParam(":id", $id, PDO::PARAM_INT);
                 $query->bindParam(":name", $name);
                 $query->bindParam(":marque", $marque);
                 $query->bindParam(":dimension", $dimension);

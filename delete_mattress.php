@@ -10,8 +10,10 @@ if (isset($_GET["id"])){
     $dsn = "mysql:host=localhost;dbname=literie3000";
     $db = new PDO($dsn, "root", "root");
 
+    $id = trim(strip_tags($_GET["id"]));
+
     $query = $db->prepare("SELECT * FROM mattress WHERE id = :id");
-    $query->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
+    $query->bindParam(":id", $id, PDO::PARAM_INT);
     // On exécute la requête
     $query->execute();
     $item = $query->fetch();
@@ -21,7 +23,7 @@ if (isset($_GET["id"])){
 
         // Puisque nous avons trouvé le bon id, nous pouvons préparer la requête pour supprimer l'élément
         $query = $db->prepare("DELETE FROM mattress WHERE id = :id");
-        $query->bindParam(":id", $_GET["id"], PDO::PARAM_INT);
+        $query->bindParam(":id", $id, PDO::PARAM_INT);
         // On exécute la requête
         $query->execute();
         
