@@ -21,7 +21,7 @@
         <header>
             <div class="container-flex-header">
                 <div class="header-left">
-                    <img src="./img/logo literie3000/logo fond transparent.png" alt="Logo Literie 3000">
+                    <img src="./img/logo literie3000/logo-fond-transparent.png" alt="Logo Literie 3000">
                 </div>
                 <div class="header-right">
                         <a href="./add_mattress.php">Ajouter un matelas</a>
@@ -31,9 +31,9 @@
     <?php
     } else {
     ?>
-        <header>
-            <div class="container-flex-header">
-                <img src="./img/logo literie3000/3.png" alt="Logo Literie 3000">
+        <header class="false">
+            <div class="container-flex-header-false">
+                <img src="./img/logo literie3000/logo-fond-transparent.png" alt="Logo Literie 3000">
             </div>
         </header>
     <?php
